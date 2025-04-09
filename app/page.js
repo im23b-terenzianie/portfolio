@@ -14,7 +14,7 @@ export default function Home() {
                 </div>
 
 
-                <div className="w-[180px] h-[180px] ml-6 mr-4">
+                <div className="w-full h-full ml-6 mr-4 ">
                     <Image
                         src="/IMG_0394.JPG"
                         alt="Enzo Terenziani"
