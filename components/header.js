@@ -12,9 +12,9 @@ export default function Header() {
 
 
             <div className="col-span-1 flex justify-between space-x-8 list-none">
-                <Link href="#about" className="list-none text-[#37424f] hover:text-[#FF6B6B] px-4 py-4">About me</Link>
-                <Link href="#projects" className="text-[#37424f] hover:text-[#FF6B6B] px-4 py-4">Projects</Link>
-                <Link href="#contact" className="text-[#37424f] hover:text-[#FF6B6B] px-4 py-4">Contact</Link>
+                <Link href="#about" className="list-none text-[#37424f] hover:text-[#FF6B6B] px-4 py-4 text-xl">About me</Link>
+                <Link href="#projects" className="text-[#37424f] hover:text-[#FF6B6B] px-4 py-4 text-xl">Projects</Link>
+                <Link href="#contact" className="text-[#37424f] hover:text-[#FF6B6B] px-4 py-4 text-xl">Contact</Link>
             </div>
 
 
