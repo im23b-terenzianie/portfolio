@@ -5,7 +5,6 @@ export default function Home() {
         <div className="flex items-center justify-start min-h-screen px-0">
 
             <div className="flex items-center">
-                
                 <div className="bg-[#fbb8b8] rounded-r-xl p-6 w-[300px]">
                     <h1 className="text-[#2c2c2c] text-lg font-semibold">Enzo Terenziani</h1>
                     <p className="text-[#2c2c2c] text-sm mt-1">
@@ -13,7 +12,7 @@ export default function Home() {
                     </p>
                 </div>
 
-
+$
                 <div className="w-full h-full ml-6 mr-4 ">
                     <Image
                         src="/IMG_0394.JPG"
