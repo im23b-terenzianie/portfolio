@@ -15,7 +15,7 @@ export default function Header() {
             <div className="col-span-1 flex justify-between space-x-8">
                 <a href="#about" className="text-[#37424f] hover:text-[#FF6B6B] no-underline">Über mich</a>
                 <a href="#projects" className="text-[#37424f] hover:text-[#FF6B6B] no-underline">Projekte</a>
-                <a href="#contact" className="text-[#37424f] hover:text-[#FF6B6B] no-underline">Kontakt</a>
+                <a href="#contact" className="text-[#37424f] hover:text-[#FF6B6B] no-underline ">Kontakt</a>
             </div>
 
             <div className="col-span-1 flex justify-end space-x-4">
