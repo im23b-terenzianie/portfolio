@@ -19,8 +19,8 @@ const projects: Project[] = [
     title: "Portfolio Website",
     description: "A modern portfolio website built with Next.js, Framer Motion, and Tailwind CSS. Features smooth animations and responsive design.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/yourusername/portfolio",
-    liveUrl: "https://your-portfolio.com"
+    githubUrl: "https://github.com/im23b-terenzianie/portfolio",
+    liveUrl: "https://portfolio-ciwihjlcz-enzo-terenzianis-projects.vercel.app"
   },
   // Add more projects here
 ];
