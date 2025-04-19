@@ -68,6 +68,13 @@ export function BackgroundPaths({
 
     const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById('projects');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div ref={containerRef} className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950">
             <div className="absolute inset-0">
@@ -119,6 +126,7 @@ export function BackgroundPaths({
                     >
                         <Button
                             variant="ghost"
+                            onClick={scrollToProjects}
                             className="rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md 
                             bg-white/95 hover:bg-white/100 dark:bg-black/95 dark:hover:bg-black/100 
                             text-black dark:text-white transition-all duration-300 
