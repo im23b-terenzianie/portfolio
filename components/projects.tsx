@@ -16,13 +16,25 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Portfolio Website",
-    description: "A modern portfolio website built with Next.js, Framer Motion, and Tailwind CSS. Features smooth animations and responsive design.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/im23b-terenzianie/portfolio",
-    liveUrl: "https://portfolio-ciwihjlcz-enzo-terenzianis-projects.vercel.app"
+    title: "Calender Project",
+    description: "It's my first project in Next.js. It's a calender that shows the current month and the days of the week. You can click on a day to see the events of that day.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    githubUrl: "https://github.com/im23b-terenzianie/calenderproject",
+    liveUrl: "https://kalenderproject-f558gmiio-enzo-terenzianis-projects.vercel.app"
   },
-  // Add more projects here
+  {
+    title: "Tank Game Bots",
+    description: "With this project I started to learn Java. It's a project with multiple bots that play against each other in a tank game.",
+    technologies: ["Java", "JavaFX", "Maven", "Git"],
+    githubUrl: "https://github.com/im23b-terenzianie/Panzer_team_siege",
+  },
+  {
+    title: "Cyberattacks Website",
+    description: "This is a website that shows the different types of cyberattacks in Ukraine and how to protect yourself from them.",
+    technologies: ["HTML", "CSS", "JavaScript", "Git"],
+    githubUrl: "https://github.com/im23b-terenzianie/projekt_cyberattacks",
+    liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html"
+  }
 ];
 
 const Projects = () => {
