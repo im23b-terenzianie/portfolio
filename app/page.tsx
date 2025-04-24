@@ -2,6 +2,7 @@ import Image from "next/image";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import AboutMe from "@/components/aboutme";
 import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <BackgroundPaths title="Enzo Terenziani" />
       <AboutMe />
       <Projects />
+      <Contact />
     </div>
   );
 }
