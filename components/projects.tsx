@@ -77,134 +77,136 @@ const Projects = () => {
       animate={{ opacity: 1 }}
       className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 py-20 px-4"
     >
-      <div className="max-w-6xl mx-auto w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80">
-            My Projects
-          </h2>
-          <div className="w-24 h-1 bg-neutral-900 dark:bg-white mx-auto"></div>
-        </motion.div>
+      <div className="w-full flex justify-center">
+        <div className="w-full max-w-md md:max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80">
+              My Projects
+            </h2>
+            <div className="w-24 h-1 bg-neutral-900 dark:bg-white mx-auto"></div>
+          </motion.div>
 
-        <div className="relative overflow-hidden">
-          <div ref={carouselRef} className="relative h-[600px] w-full">
-            <motion.div
-              key={currentIndex}
-              custom={currentIndex}
-              variants={slideVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{
-                x: { type: "spring", stiffness: 300, damping: 30 },
-                opacity: { duration: 0.2 }
-              }}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={1}
-              onDragEnd={(_, { offset, velocity }) => {
-                const swipe = swipePower(offset.x, velocity.x);
+          <div className="relative overflow-visible">
+            <div ref={carouselRef} className="relative h-auto min-h-[500px] w-full">
+              <motion.div
+                key={currentIndex}
+                custom={currentIndex}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: "spring", stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.2 }
+                }}
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={1}
+                onDragEnd={(_, { offset, velocity }) => {
+                  const swipe = swipePower(offset.x, velocity.x);
 
-                if (swipe < -swipeConfidenceThreshold) {
-                  paginate(1);
-                } else if (swipe > swipeConfidenceThreshold) {
-                  paginate(-1);
-                }
-              }}
-              className="absolute w-full"
-            >
-              <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-8 backdrop-blur-sm">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <h3 className="text-3xl font-bold text-neutral-900 dark:text-white">
-                      {projects[currentIndex].title}
-                    </h3>
-                    <p className="text-lg text-neutral-700 dark:text-neutral-300">
-                      {projects[currentIndex].description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {projects[currentIndex].technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 text-sm rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex gap-4">
-                      <Button
-                        variant="outline"
-                        className="flex items-center gap-2"
-                        onClick={() => window.open(projects[currentIndex].githubUrl, '_blank')}
-                      >
-                        <Github className="w-4 h-4" />
-                        View Source
-                      </Button>
-                      {projects[currentIndex].liveUrl && (
+                  if (swipe < -swipeConfidenceThreshold) {
+                    paginate(1);
+                  } else if (swipe > swipeConfidenceThreshold) {
+                    paginate(-1);
+                  }
+                }}
+                className="w-full"
+              >
+                <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-8 md:p-12 lg:p-16 backdrop-blur-sm">
+                  <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+                    <div className="space-y-6 w-full md:w-1/2">
+                      <h3 className="text-3xl font-bold text-neutral-900 dark:text-white">
+                        {projects[currentIndex].title}
+                      </h3>
+                      <p className="text-lg text-neutral-700 dark:text-neutral-300">
+                        {projects[currentIndex].description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {projects[currentIndex].technologies.map((tech, index) => (
+                          <span
+                            key={index}
+                            className="px-3 py-1 text-sm rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex gap-4">
                         <Button
                           variant="outline"
                           className="flex items-center gap-2"
-                          onClick={() => window.open(projects[currentIndex].liveUrl, '_blank')}
+                          onClick={() => window.open(projects[currentIndex].githubUrl, '_blank')}
                         >
-                          <ExternalLink className="w-4 h-4" />
-                          Live Demo
+                          <Github className="w-4 h-4" />
+                          View Source
                         </Button>
+                        {projects[currentIndex].liveUrl && (
+                          <Button
+                            variant="outline"
+                            className="flex items-center gap-2"
+                            onClick={() => window.open(projects[currentIndex].liveUrl, '_blank')}
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                            Live Demo
+                          </Button>
+                        )}
+                      </div>
+                    </div>
+                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video w-full md:w-1/2 min-h-[180px]">
+                      {projects[currentIndex].image ? (
+                        <img
+                          src={projects[currentIndex].image}
+                          alt={projects[currentIndex].title}
+                          className="object-cover w-full h-full"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-neutral-400">
+                          No preview available
+                        </div>
                       )}
                     </div>
                   </div>
-                  <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video">
-                    {projects[currentIndex].image ? (
-                      <img
-                        src={projects[currentIndex].image}
-                        alt={projects[currentIndex].title}
-                        className="object-cover w-full h-full"
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-neutral-400">
-                        No preview available
-                      </div>
-                    )}
-                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </div>
+              </motion.div>
+            </div>
 
-          <Button
-            variant="ghost"
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
-            onClick={() => paginate(-1)}
-            disabled={currentIndex === 0}
-          >
-            <ChevronLeft className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
-          </Button>
+            <Button
+              variant="ghost"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
+              onClick={() => paginate(-1)}
+              disabled={currentIndex === 0}
+            >
+              <ChevronLeft className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+            </Button>
 
-          <Button
-            variant="ghost"
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
-            onClick={() => paginate(1)}
-            disabled={currentIndex === projects.length - 1}
-          >
-            <ChevronRight className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
-          </Button>
+            <Button
+              variant="ghost"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
+              onClick={() => paginate(1)}
+              disabled={currentIndex === projects.length - 1}
+            >
+              <ChevronRight className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+            </Button>
 
-          <div className="flex justify-center mt-8 gap-2">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex
-                    ? 'bg-neutral-900 dark:bg-white'
-                    : 'bg-neutral-300 dark:bg-neutral-700'
-                }`}
-              />
-            ))}
+            <div className="flex justify-center mt-8 gap-2">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentIndex
+                      ? 'bg-neutral-900 dark:bg-white'
+                      : 'bg-neutral-300 dark:bg-neutral-700'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
