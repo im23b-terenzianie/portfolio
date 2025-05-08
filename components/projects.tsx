@@ -35,6 +35,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/im23b-terenzianie/projekt_cyberattacks",
     liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html"
   }
+
 ];
 
 const Projects = () => {
@@ -199,11 +200,10 @@ const Projects = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex
+                  className={`w-2 h-2 rounded-full transition-colors ${index === currentIndex
                       ? 'bg-neutral-900 dark:bg-white'
                       : 'bg-neutral-300 dark:bg-neutral-700'
-                  }`}
+                    }`}
                 />
               ))}
             </div>

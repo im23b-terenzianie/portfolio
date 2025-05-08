@@ -48,16 +48,18 @@ const AboutMe = () => {
         <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-              I'm a passionate developer with a keen eye for creating beautiful and functional web applications.
-              My journey in tech started with a simple curiosity that has grown into a deep love for coding
-              and problem-solving.
+              I'm a motivated and curious developer with a strong interest in creating powerful, user-focused applications.
+              I enjoy working with technologies like Python, Java, and Next.js, and I'm especially passionate about app development and cybersecurity.
             </p>
             <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source
-              projects, or sharing my knowledge with the developer community.
+              My tech journey began with a drive to build useful tools — today, I continue that journey by combining creativity, clean code, and problem-solving skills.
+              In my free time, you'll often find me at the gym with friends, working on side projects, or exploring the roads on my motorcycle.
+            </p>
+            <p className="text-lg leading-relaxed text-neutral-700 dark:text-neutral-300">
+              I love learning, building, and sharing — and I’m always looking for ways to grow, both personally and professionally.
             </p>
           </div>
-          
+
           <motion.div
             variants={itemVariants}
             className="grid grid-cols-2 gap-4"
