@@ -34,8 +34,8 @@ const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/projekt_cyberattacks",
     liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html"
-  }
-{
+  },
+  {
     title: "React Testshop",
     description: "This is a testshop made with React. It's a simple shop that shows the products and allows you to add them to the cart. I created it to learn React.",
     technologies: ["React", "Tailwind CSS", "Git"],
