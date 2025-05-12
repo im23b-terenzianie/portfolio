@@ -39,6 +39,16 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/impressum" className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">
+                  Impressum
+                </Link>
+              </li>
+              <li>
+                <Link href="/datenschutz" className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white transition-colors">
+                  Datenschutz
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -85,4 +95,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
