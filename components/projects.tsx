@@ -40,6 +40,12 @@ const projects: Project[] = [
     description: "This is a testshop made with React. It's a simple shop that shows the products and allows you to add them to the cart. I created it to learn React.",
     technologies: ["React", "Tailwind CSS", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/learning_react"
+  },
+  {
+    title: "Creatine App",
+    description: "This is a simple app that remindes me daily to take my creatine.",
+    technologies: ["React", "Tailwind CSS", "Git"],
+    githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
   }
 ];
 
