@@ -87,7 +87,7 @@ const Projects = () => {
       id="projects"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 py-20 px-4"
+      className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 py-32 px-4"
     >
       <div className="w-full flex justify-center">
         <div className="w-full max-w-md md:max-w-4xl">
@@ -95,7 +95,7 @@ const Projects = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-24"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80">
               My Projects
@@ -130,8 +130,8 @@ const Projects = () => {
                 }}
                 className="w-full"
               >
-                <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-8 md:p-12 lg:p-16 backdrop-blur-sm">
-                  <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+                <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-10 md:p-16 lg:p-20 backdrop-blur-sm">
+                  <div className="flex flex-col md:flex-row gap-16 md:gap-20 lg:gap-24 items-center">
                     <div className="space-y-6 w-full md:w-1/2">
                       <h3 className="text-3xl font-bold text-neutral-900 dark:text-white">
                         {projects[currentIndex].title}
@@ -170,7 +170,7 @@ const Projects = () => {
                         )}
                       </div>
                     </div>
-                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video w-full md:w-1/2 min-h-[180px]">
+                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video w-full md:w-1/2 min-h-[300px]">
                       {projects[currentIndex].image ? (
                         <img
                           src={projects[currentIndex].image}
@@ -190,7 +190,7 @@ const Projects = () => {
 
             <Button
               variant="ghost"
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
+              className="absolute left-[-4rem] top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
               onClick={() => paginate(-1)}
               disabled={currentIndex === 0}
             >
@@ -199,7 +199,7 @@ const Projects = () => {
 
             <Button
               variant="ghost"
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
+              className="absolute right-[-4rem] top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
               onClick={() => paginate(1)}
               disabled={currentIndex === projects.length - 1}
             >
@@ -225,4 +225,4 @@ const Projects = () => {
   );
 };
 
-export default Projects; 
+export default Projects;
