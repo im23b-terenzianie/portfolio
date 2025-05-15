@@ -62,7 +62,7 @@ const AboutMe = () => {
 
           <motion.div variants={itemVariants} className="w-full flex justify-center">
             <img
-              src="/images/IMG_0397.jpg"
+              src="/images/IMG0397.jpg"
               alt="About Me Image"
               className="w-4/5 max-w-sm object-cover rounded-lg shadow-lg"
             />
