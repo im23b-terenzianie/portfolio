@@ -60,33 +60,52 @@ const AboutMe = () => {
             </p>
           </div>
 
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 gap-4"
-          >
-            {[
-              { title: "Python", value: "90%" },
-              { title: "Java", value: "85%" },
-              { title: "NextJS", value: "95%" },
-              { title: "Teamwork", value: "88%" },
-            ].map((skill, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="bg-neutral-100 dark:bg-neutral-800 p-4 rounded-lg"
-              >
-                <h3 className="text-lg font-semibold mb-2 text-neutral-900 dark:text-white">{skill.title}</h3>
-                <div className="w-full bg-neutral-200 dark:bg-neutral-700 rounded-full h-2.5">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: skill.value } : { width: 0 }}
-                    transition={{ duration: 1, delay: index * 0.2 }}
-                    className="h-2.5 rounded-full bg-neutral-900 dark:bg-white"
-                  />
-                </div>
-              </motion.div>
-            ))}
+          <motion.div variants={itemVariants} className="w-full flex justify-center">
+            <img
+              src="/images/IMG_0397.jpg"
+              alt="About Me Image"
+              className="w-4/5 max-w-sm object-cover rounded-lg shadow-lg"
+            />
           </motion.div>
+        </motion.div>
+
+        <motion.div variants={itemVariants} className="mt-12">
+          <div className="flex flex-col items-start gap-5">
+            <div className="flex gap-4">
+              <div className="w-22 h-22 flex items-center justify-center">
+                <img src="/images/python.png" alt="Tech 1" className="w-16 h-16 object-contain" />
+              </div>
+              <div className="w-22 h-22 flex items-center justify-center">
+                <img src="/images/java.png" alt="Tech 2" className="w-16 h-16 object-contain" />
+              </div>
+              <div className="w-22 h-22 flex items-center justify-center">
+                <img src="/images/nextjs.png" alt="Tech 3" className="w-16 h-16 object-contain" />
+              </div>
+            </div>
+            <div className="flex gap-4">
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/HTML.png" alt="Tech 4" className="w-12 h-12 object-contain" />
+              </div>
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/css.png" alt="Tech 5" className="w-12 h-12 object-contain" />
+              </div>
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/js.png" alt="Tech 6" className="w-12 h-12 object-contain" />
+              </div>
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/react.png" alt="Tech 7" className="w-12 h-12 object-contain" />
+              </div>
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/tailwind.png" alt="Tech 8" className="w-12 h-12 object-contain" />
+              </div>
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/nodejs.png" alt="Tech 9" className="w-12 h-12 object-contain" />
+              </div>
+              <div className="w-16 h-16 flex items-center justify-center">
+                <img src="/images/Mongodb.png" alt="Tech 10" className="w-12 h-12 object-contain" />
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </motion.section>

@@ -76,10 +76,13 @@ const Projects = () => {
   };
 
   const paginate = (newDirection: number) => {
-    const newIndex = currentIndex + newDirection;
-    if (newIndex >= 0 && newIndex < projects.length) {
-      setCurrentIndex(newIndex);
+    let newIndex = currentIndex + newDirection;
+    if (newIndex < 0) {
+      newIndex = projects.length - 1;
+    } else if (newIndex >= projects.length) {
+      newIndex = 0;
     }
+    setCurrentIndex(newIndex);
   };
 
   return (
