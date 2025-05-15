@@ -43,8 +43,8 @@ const projects: Project[] = [
   },
   {
     title: "Creatine App",
-    description: "This is a simple app that remindes me daily to take my creatine.",
-    technologies: ["React", "Tailwind CSS", "Git"],
+    description: "This is a simple app that remindes me daily to take my creatine. It works with expo go because I'm still working on it to get it in the play store.",
+    technologies: ["React", "Tailwind CSS", "Typescript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
   }
 ];
