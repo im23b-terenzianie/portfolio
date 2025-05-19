@@ -46,6 +46,12 @@ const projects: Project[] = [
     description: "This is a simple app that remindes me daily to take my creatine. It works with expo go because I'm still working on it to get it in the play store.",
     technologies: ["React", "Tailwind CSS", "Typescript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
+  },
+  {
+    title: "RetroPie",
+    description: "This is a project that I did to learn how to use a Raspberry Pi. I flashed the RetroPie image on the SD card and set it up to play games. I also created a automated file system to organize the games.",
+    technologies: ["Raspberry Pi", "RetroPie", "Git"],
+    githubUrl: "https://github.com/im23b-terenzianie/retropie-project",
   }
 ];
 
@@ -101,7 +107,7 @@ const Projects = () => {
             className="text-center mb-24"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80">
-              My Projects
+              My Projects2
             </h2>
             <div className="w-24 h-1 bg-neutral-900 dark:bg-white mx-auto"></div>
           </motion.div>
