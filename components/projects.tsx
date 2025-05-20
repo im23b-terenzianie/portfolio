@@ -107,7 +107,7 @@ const Projects = () => {
             className="text-center mb-24"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80">
-              My Projects2
+              My Projects
             </h2>
             <div className="w-24 h-1 bg-neutral-900 dark:bg-white mx-auto"></div>
           </motion.div>
