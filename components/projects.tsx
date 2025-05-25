@@ -50,7 +50,7 @@ const projects: Project[] = [
   {
     title: "RetroPie",
     description: "This is a project that I did to learn how to use a Raspberry Pi. I flashed the RetroPie image on the SD card and set it up to play games. I also created a automated file system to organize the games.",
-    technologies: ["Raspberry Pi", "RetroPie", "Git"],
+    technologies: ["Python", "Raspberry Pi", "RetroPie", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/retropie-project",
   }
 ];
