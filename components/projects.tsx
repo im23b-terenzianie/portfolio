@@ -57,6 +57,7 @@ const projects: Project[] = [
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
   const slideVariants = {
@@ -88,6 +89,7 @@ const Projects = () => {
     } else if (newIndex >= projects.length) {
       newIndex = 0;
     }
+    setDirection(newDirection);
     setCurrentIndex(newIndex);
   };
 
@@ -116,7 +118,7 @@ const Projects = () => {
             <div ref={carouselRef} className="relative h-auto min-h-[500px] w-full">
               <motion.div
                 key={currentIndex}
-                custom={currentIndex}
+                custom={direction}
                 variants={slideVariants}
                 initial="enter"
                 animate="center"
