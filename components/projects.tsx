@@ -12,6 +12,7 @@ interface Project {
   githubUrl: string;
   liveUrl?: string;
   image?: string;
+  status: 'finished' | 'in-progress' | 'paused';
 }
 
 const projects: Project[] = [
@@ -20,38 +21,44 @@ const projects: Project[] = [
     description: "It's my first project in Next.js. It's a calender that shows the current month and the days of the week. You can click on a day to see the events of that day.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
     githubUrl: "https://github.com/im23b-terenzianie/calenderproject",
-    liveUrl: "https://kalenderproject-f558gmiio-enzo-terenzianis-projects.vercel.app"
+    liveUrl: "https://kalenderproject-f558gmiio-enzo-terenzianis-projects.vercel.app",
+    status: 'paused',
   },
   {
     title: "Tank Game Bots",
     description: "With this project I started to learn Java. It's a project with multiple bots that play against each other in a tank game.",
     technologies: ["Java", "JavaFX", "Maven", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/Panzer_team_siege",
+    status: 'finished',
   },
   {
     title: "Cyberattacks Website",
     description: "This is a website that shows the different types of cyberattacks in Ukraine and how to protect yourself from them.",
     technologies: ["HTML", "CSS", "JavaScript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/projekt_cyberattacks",
-    liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html"
+    liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html",
+    status: 'finished',
   },
   {
     title: "React Testshop",
     description: "This is a testshop made with React. It's a simple shop that shows the products and allows you to add them to the cart. I created it to learn React.",
     technologies: ["React", "Tailwind CSS", "Git"],
-    githubUrl: "https://github.com/im23b-terenzianie/learning_react"
+    githubUrl: "https://github.com/im23b-terenzianie/learning_react",
+    status: 'finished',
   },
   {
     title: "Creatine App",
     description: "This is a simple app that remindes me daily to take my creatine. It works with expo go because I'm still working on it to get it in the play store.",
     technologies: ["React", "Tailwind CSS", "Typescript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
+    status: 'in-progress',
   },
   {
     title: "RetroPie",
     description: "This is a project that I did to learn how to use a Raspberry Pi. I flashed the RetroPie image on the SD card and set it up to play games. I also created a automated file system to organize the games.",
     technologies: ["Python", "Raspberry Pi", "RetroPie", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/retropie-project",
+    status: 'in-progress',
   }
 ];
 
@@ -144,9 +151,26 @@ const Projects = () => {
                 <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-10 md:p-16 lg:p-20 backdrop-blur-sm">
                   <div className="flex flex-col md:flex-row gap-16 md:gap-20 lg:gap-24 items-center">
                     <div className="space-y-6 w-full md:w-1/2">
-                      <h3 className="text-3xl font-bold text-neutral-900 dark:text-white">
-                        {projects[currentIndex].title}
-                      </h3>
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-3xl font-bold text-neutral-900 dark:text-white">
+                          {projects[currentIndex].title}
+                        </h3>
+                        {projects[currentIndex].status === 'finished' && (
+                          <span className="px-3 py-1 text-sm rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 font-semibold">
+                            Finished
+                          </span>
+                        )}
+                        {projects[currentIndex].status === 'in-progress' && (
+                          <span className="px-3 py-1 text-sm rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 font-semibold">
+                            In Progress
+                          </span>
+                        )}
+                        {projects[currentIndex].status === 'paused' && (
+                          <span className="px-3 py-1 text-sm rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 font-semibold">
+                            Paused
+                          </span>
+                        )}
+                      </div>
                       <p className="text-lg text-neutral-700 dark:text-neutral-300">
                         {projects[currentIndex].description}
                       </p>
