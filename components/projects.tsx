@@ -17,14 +17,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Calender Project",
-    description: "It's my first project in Next.js. It's a calender that shows the current month and the days of the week. You can click on a day to see the events of that day.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
-    githubUrl: "https://github.com/im23b-terenzianie/calenderproject",
-    liveUrl: "https://kalenderproject-f558gmiio-enzo-terenzianis-projects.vercel.app",
-    status: 'paused',
-  },
-  {
     title: "Tank Game Bots",
     description: "With this project I started to learn Java. It's a project with multiple bots that play against each other in a tank game.",
     technologies: ["Java", "JavaFX", "Maven", "Git"],
@@ -59,6 +51,13 @@ const projects: Project[] = [
     technologies: ["Python", "Raspberry Pi", "RetroPie", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/retropie-project",
     status: 'in-progress',
+  },
+  {
+    title: "Calender Project",
+    description: "It's my first project in Next.js. It's a calender that shows the current month and the days of the week. You can click on a day to see the events of that day.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    githubUrl: "https://github.com/im23b-terenzianie/calenderproject",
+    status: 'paused',
   }
 ];
 
@@ -227,7 +226,6 @@ const Projects = () => {
               variant="ghost"
               className="absolute left-2 md:left-[-4rem] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
               onClick={() => paginate(-1)}
-              disabled={currentIndex === 0}
             >
               <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
             </Button>
@@ -236,7 +234,6 @@ const Projects = () => {
               variant="ghost"
               className="absolute right-2 md:right-[-4rem] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
               onClick={() => paginate(1)}
-              disabled={currentIndex === projects.length - 1}
             >
               <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
             </Button>
