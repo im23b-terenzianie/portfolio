@@ -1,0 +1,15 @@
+{
+    "redirects": [
+        {
+            "source": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "www.enzo-terenziani.com"
+                }
+            ],
+            "destination": "https://enzo-terenziani.com/:1",
+            "permanent": true
+        }
+    ]
+}
