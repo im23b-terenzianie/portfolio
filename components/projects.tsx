@@ -148,46 +148,46 @@ const Projects = () => {
                 }}
                 className="w-full"
               >
-                <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-10 md:p-16 lg:p-20 backdrop-blur-sm">
-                  <div className="flex flex-col md:flex-row gap-16 md:gap-20 lg:gap-24 items-center">
-                    <div className="space-y-6 w-full md:w-1/2">
-                      <div className="flex items-center gap-2">
-                        <h3 className="text-3xl font-bold text-neutral-900 dark:text-white">
+                <div className="bg-neutral-100 dark:bg-neutral-800/50 rounded-2xl p-4 md:p-10 lg:p-20 backdrop-blur-sm">
+                  <div className="flex flex-col-reverse md:flex-row gap-4 md:gap-20 lg:gap-24 items-center">
+                    <div className="space-y-3 md:space-y-6 w-full md:w-1/2">
+                      <div className="flex flex-wrap items-center gap-2 justify-center md:justify-start">
+                        <h3 className="text-xl md:text-3xl font-bold text-neutral-900 dark:text-white text-center md:text-left">
                           {projects[currentIndex].title}
                         </h3>
                         {projects[currentIndex].status === 'finished' && (
-                          <span className="px-3 py-1 text-sm rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 font-semibold">
+                          <span className="px-3 py-1 text-xs md:text-sm rounded-full bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 font-semibold">
                             Finished
                           </span>
                         )}
                         {projects[currentIndex].status === 'in-progress' && (
-                          <span className="px-3 py-1 text-sm rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 font-semibold">
+                          <span className="px-3 py-1 text-xs md:text-sm rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200 font-semibold">
                             In Progress
                           </span>
                         )}
                         {projects[currentIndex].status === 'paused' && (
-                          <span className="px-3 py-1 text-sm rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 font-semibold">
+                          <span className="px-3 py-1 text-xs md:text-sm rounded-full bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200 font-semibold">
                             Paused
                           </span>
                         )}
                       </div>
-                      <p className="text-lg text-neutral-700 dark:text-neutral-300">
+                      <p className="text-sm md:text-lg text-neutral-700 dark:text-neutral-300 text-center md:text-left">
                         {projects[currentIndex].description}
                       </p>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                         {projects[currentIndex].technologies.map((tech, index) => (
                           <span
                             key={index}
-                            className="px-3 py-1 text-sm rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300"
+                            className="px-3 py-1 text-xs md:text-sm rounded-full bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300"
                           >
                             {tech}
                           </span>
                         ))}
                       </div>
-                      <div className="flex gap-4">
+                      <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center md:items-start w-full">
                         <Button
                           variant="outline"
-                          className="flex items-center gap-2"
+                          className="flex items-center gap-2 w-full md:w-auto justify-center"
                           onClick={() => window.open(projects[currentIndex].githubUrl, '_blank')}
                         >
                           <Github className="w-4 h-4" />
@@ -196,7 +196,7 @@ const Projects = () => {
                         {projects[currentIndex].liveUrl && (
                           <Button
                             variant="outline"
-                            className="flex items-center gap-2"
+                            className="flex items-center gap-2 w-full md:w-auto justify-center"
                             onClick={() => window.open(projects[currentIndex].liveUrl, '_blank')}
                           >
                             <ExternalLink className="w-4 h-4" />
@@ -205,7 +205,7 @@ const Projects = () => {
                         )}
                       </div>
                     </div>
-                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video w-full md:w-1/2 min-h-[300px]">
+                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video w-full md:w-1/2 min-h-[160px] md:min-h-[300px] mb-4 md:mb-0">
                       {projects[currentIndex].image ? (
                         <img
                           src={projects[currentIndex].image}
@@ -225,20 +225,20 @@ const Projects = () => {
 
             <Button
               variant="ghost"
-              className="absolute left-[-4rem] top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
+              className="absolute left-2 md:left-[-4rem] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
               onClick={() => paginate(-1)}
               disabled={currentIndex === 0}
             >
-              <ChevronLeft className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
             </Button>
 
             <Button
               variant="ghost"
-              className="absolute right-[-4rem] top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
+              className="absolute right-2 md:right-[-4rem] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
               onClick={() => paginate(1)}
               disabled={currentIndex === projects.length - 1}
             >
-              <ChevronRight className="w-6 h-6 text-neutral-700 dark:text-neutral-200" />
+              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
             </Button>
 
             <div className="flex justify-center mt-8 gap-2">
