@@ -104,7 +104,7 @@ const Projects = () => {
       id="projects"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 py-32 px-4"
+      className="min-h-screen flex items-center justify-center bg-white dark:bg-neutral-950 py-32 px-4 overflow-x-hidden"
     >
       <div className="w-full flex justify-center">
         <div className="w-full max-w-md md:max-w-4xl">

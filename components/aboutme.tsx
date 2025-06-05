@@ -72,39 +72,16 @@ const AboutMe = () => {
 
         <motion.div variants={itemVariants} className="mt-8 md:mt-12">
           <div className="flex flex-col items-center md:items-start gap-4 md:gap-5 w-full">
-            <div className="flex flex-row justify-center md:justify-start gap-6 md:gap-4 w-full md:w-auto mb-2 md:mb-0">
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/python.png" alt="Tech 1" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/java.png" alt="Tech 2" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/nextjs.png" alt="Tech 3" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-            </div>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start w-full md:w-auto">
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/HTML.png" alt="Tech 4" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/css.png" alt="Tech 5" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/js.png" alt="Tech 6" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/react.png" alt="Tech 7" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/tailwind.png" alt="Tech 8" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/nodejs.png" alt="Tech 9" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
-              <div className="w-16 h-16 md:w-22 md:h-22 flex items-center justify-center">
-                <img src="/images/Mongodb.png" alt="Tech 10" className="w-12 h-12 md:w-16 md:h-16 object-contain" />
-              </div>
+              {["python.png", "java.png", "nextjs.png", "HTML.png", "css.png", "js.png", "react.png", "tailwind.png", "nodejs.png", "Mongodb.png"].map((img, idx) => (
+                <span
+                  key={img}
+                  className="inline-flex items-center px-4 py-2 m-1 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer font-medium"
+                >
+                  <img src={`/images/${img}`} alt={img} className="w-6 h-6 mr-2 object-contain" />
+                  {img.replace('.png', '').replace('js', 'JS').replace('Mongodb', 'MongoDB').replace('HTML', 'HTML').replace('css', 'CSS').replace('tailwind', 'Tailwind')}
+                </span>
+              ))}
             </div>
           </div>
         </motion.div>

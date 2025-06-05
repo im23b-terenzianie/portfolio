@@ -137,10 +137,10 @@ export function BackgroundPaths({
                                 My Projects
                             </span>
                             <span
-                                className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 
-                                transition-all duration-300"
+                                className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-y-1.5 
+                                transition-all duration-300 text-xl font-bold"
                             >
-                                →
+                                ↓
                             </span>
                         </Button>
                     </div>
