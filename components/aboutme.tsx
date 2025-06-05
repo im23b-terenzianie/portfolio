@@ -34,6 +34,7 @@ const AboutMe = () => {
   return (
     <motion.section
       ref={ref}
+      id="about"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={containerVariants}
