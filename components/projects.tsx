@@ -238,7 +238,14 @@ const Projects = () => {
               <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
             </Button>
 
-            <div className="flex justify-center mt-8 gap-2">
+            <div className="flex justify-center mt-8 gap-2 items-center">
+              <Button
+                variant="ghost"
+                className="w-8 h-8 p-0 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700"
+                onClick={() => paginate(-1)}
+              >
+                <ChevronLeft className="w-4 h-4 text-neutral-700 dark:text-neutral-200" />
+              </Button>
               {projects.map((_, index) => (
                 <button
                   key={index}
@@ -249,6 +256,13 @@ const Projects = () => {
                     }`}
                 />
               ))}
+              <Button
+                variant="ghost"
+                className="w-8 h-8 p-0 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-700"
+                onClick={() => paginate(1)}
+              >
+                <ChevronRight className="w-4 h-4 text-neutral-700 dark:text-neutral-200" />
+              </Button>
             </div>
           </div>
         </div>
