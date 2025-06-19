@@ -222,22 +222,6 @@ const Projects = () => {
               </motion.div>
             </div>
 
-            <Button
-              variant="ghost"
-              className="absolute left-2 md:left-[-4rem] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
-              onClick={() => paginate(-1)}
-            >
-              <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
-            </Button>
-
-            <Button
-              variant="ghost"
-              className="absolute right-2 md:right-[-4rem] top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-neutral-800/90 backdrop-blur-sm hover:bg-white dark:hover:bg-neutral-700 shadow-lg border border-neutral-200 dark:border-neutral-700 z-10"
-              onClick={() => paginate(1)}
-            >
-              <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-neutral-700 dark:text-neutral-200" />
-            </Button>
-
             <div className="flex justify-center mt-8 gap-2 items-center">
               <Button
                 variant="ghost"
