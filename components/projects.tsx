@@ -22,6 +22,7 @@ const projects: Project[] = [
     technologies: ["Java", "JavaFX", "Maven", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/Panzer_team_siege",
     status: 'finished',
+    image: "/images/Tankgame.png"
   },
   {
     title: "Cyberattacks Website",
@@ -30,6 +31,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/im23b-terenzianie/projekt_cyberattacks",
     liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html",
     status: 'finished',
+    image: "/images/cyberattacks.png"
   },
   {
     title: "React Testshop",
@@ -37,6 +39,7 @@ const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/learning_react",
     status: 'finished',
+    image: "/images/testshop.png"
   },
   {
     title: "Creatine App",
@@ -44,6 +47,7 @@ const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Typescript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
     status: 'in-progress',
+    image: "/images/creatineapp.png"
   },
   {
     title: "RetroPie",
@@ -51,6 +55,7 @@ const projects: Project[] = [
     technologies: ["Python", "Raspberry Pi", "RetroPie", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/retropie-project",
     status: 'in-progress',
+    image: "/images/retropie.jpg"
   },
   {
     title: "Calender Project",
