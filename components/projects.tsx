@@ -17,6 +17,13 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Scrum Kanban Board",
+    description: "A lightweight Scrum tool for managing boards, sprints, and user stories — built as a simpler alternative to Jira.",
+    technologies: ["Python", "FastAPI", "PostgreSQL"],
+    githubUrl: "https://github.com/im23b-terenzianie/scrum_planer",
+    status: "in-progress",
+  },
+  {
     title: "Tank Game Bots",
     description: "With this project I started to learn Java. It's a project with multiple bots that play against each other in a tank game.",
     technologies: ["Java", "JavaFX", "Maven", "Git"],
@@ -46,16 +53,8 @@ const projects: Project[] = [
     description: "This is a simple app that remindes me daily to take my creatine. It works with expo go because I'm still working on it to get it in the play store.",
     technologies: ["React", "Tailwind CSS", "Typescript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
-    status: 'in-progress',
+    status: 'finished',
     image: "/images/creatineapp.png"
-  },
-  {
-    title: "RetroPie",
-    description: "This is a project that I did to learn how to use a Raspberry Pi. I flashed the RetroPie image on the SD card and set it up to play games. I also created a automated file system to organize the games.",
-    technologies: ["Python", "Raspberry Pi", "RetroPie", "Git"],
-    githubUrl: "https://github.com/im23b-terenzianie/retropie-project",
-    status: 'in-progress',
-    image: "/images/retropie.jpg"
   },
   {
     title: "Calender Project",
