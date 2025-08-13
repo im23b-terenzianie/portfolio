@@ -21,6 +21,7 @@ const projects: Project[] = [
     description: "A lightweight Scrum tool for managing boards, sprints, and user stories — built as a simpler alternative to Jira.",
     technologies: ["Python", "FastAPI", "PostgreSQL"],
     githubUrl: "https://github.com/im23b-terenzianie/scrum_planer",
+    liveUrl: "https://scrumify.site",
     status: "in-progress",
   },
   {
