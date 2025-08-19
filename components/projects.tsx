@@ -23,6 +23,7 @@ const projects: Project[] = [
     githubUrl: "https://github.com/im23b-terenzianie/scrum_planer",
     liveUrl: "https://scrumify.site",
     status: "in-progress",
+    image: "/images/Scrumify.png"
   },
   {
     title: "Tank Game Bots",
