@@ -48,7 +48,7 @@ const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/learning_react",
     status: 'finished',
-    image: "/images/testshop.png"
+    image: "/images/Testshop.png"
   },
   {
     title: "Creatine App",
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     title: "Calender Project",
     description: "It's my first project in Next.js. It's a calender that shows the current month and the days of the week. You can click on a day to see the events of that day.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Vercel"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/im23b-terenzianie/calenderproject",
     status: 'paused',
   }
@@ -210,7 +210,7 @@ const Projects = () => {
                         )}
                       </div>
                     </div>
-                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 aspect-video w-full md:w-1/2 min-h-[160px] md:min-h-[300px] mb-4 md:mb-0">
+                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 w-full md:w-2/3 lg:w-3/4 min-h-[120px] md:min-h-[200px] mb-4 md:mb-0">
                       {projects[currentIndex].image ? (
                         <img
                           src={projects[currentIndex].image}
