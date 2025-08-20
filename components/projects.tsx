@@ -35,7 +35,7 @@ const projects: Project[] = [
   },
   {
     title: "Cyberattacks Website",
-    description: "This is a website that shows the different types of cyberattacks in Ukraine and how to protect yourself from them.",
+    description: "This is a website that shows the different types of cyberattacks in Ukraine. It was made for a school project.",
     technologies: ["HTML", "CSS", "JavaScript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/projekt_cyberattacks",
     liveUrl: "https://im23b-terenzianie.github.io/projekt_cyberattacks/main/index.html",
@@ -52,7 +52,7 @@ const projects: Project[] = [
   },
   {
     title: "Creatine App",
-    description: "This is a simple app that remindes me daily to take my creatine. It works with expo go because I'm still working on it to get it in the play store.",
+    description: "This is a simple app that remindes me daily to take my creatine. It works with expo go.",
     technologies: ["React", "Tailwind CSS", "Typescript", "Git"],
     githubUrl: "https://github.com/im23b-terenzianie/creatineapp",
     status: 'finished',
@@ -60,7 +60,7 @@ const projects: Project[] = [
   },
   {
     title: "Calender Project",
-    description: "It's my first project in Next.js. It's a calender that shows the current month and the days of the week. You can click on a day to see the events of that day.",
+    description: "This is my first project in Next.js. It was meant to learn and explore the Framework. " ,
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     githubUrl: "https://github.com/im23b-terenzianie/calenderproject",
     status: 'paused',
@@ -210,7 +210,7 @@ const Projects = () => {
                         )}
                       </div>
                     </div>
-                    <div className="relative rounded-lg overflow-hidden bg-neutral-200 dark:bg-neutral-700 w-full md:w-2/3 lg:w-3/4 min-h-[120px] md:min-h-[200px] mb-4 md:mb-0">
+                    <div className="relative rounded-lg overflow-hidden w-full md:w-2/3 lg:w-3/4 min-h-[120px] md:min-h-[200px] mb-4 md:mb-0">
                       {projects[currentIndex].image ? (
                         <img
                           src={projects[currentIndex].image}
