@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Enzo Terenziani",
   description: "Portfolio of Enzo Terenziani",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
