@@ -120,7 +120,7 @@ const Projects = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-24"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80 leading-tight">
               My Projects
             </h2>
             <div className="w-24 h-1 bg-neutral-900 dark:bg-white mx-auto"></div>
