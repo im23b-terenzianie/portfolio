@@ -26,6 +26,14 @@ const projects: Project[] = [
     image: "/images/Scrumify.png"
   },
   {
+    title: "Duellingo",
+    description: "This is a project my team and I made for a hackathon. It's a game where you can duel with your friend over vocabulary.",
+    technologies: ["Next.js", "Tailwind CSS", "Websocket"],
+    githubUrl: "https://github.com/im23b-terenzianie/Duellingo",
+    status: 'finished',
+    image: "/images/Duellingo.png"
+  },
+  {
     title: "Tank Game Bots",
     description: "With this project I started to learn Java. It's a project with multiple bots that play against each other in a tank game.",
     technologies: ["Java", "JavaFX", "Maven", "Git"],
