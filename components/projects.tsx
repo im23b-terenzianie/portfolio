@@ -17,15 +17,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Scrum Kanban Board",
-    description: "A lightweight Scrum tool for managing boards, sprints, and user stories — built as a simpler alternative to Jira.",
-    technologies: ["Python", "FastAPI", "PostgreSQL"],
-    githubUrl: "https://github.com/im23b-terenzianie/scrum_planer",
-    liveUrl: "https://scrumify.site",
-    status: "in-progress",
-    image: "/images/Scrumify.png"
-  },
-  {
     title: "Duellingo",
     description: "This is a project my team and I made for a hackathon. It's a game where you can duel with your friend over vocabulary.",
     technologies: ["Next.js", "Tailwind CSS", "Websocket"],
